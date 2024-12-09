@@ -1,0 +1,11 @@
+GET http://localhost:3000/places?text=rua doutor gaspar ricardo, 176, santos
+
+
+###
+@originId = ChIJ3ysYDvVsYpMRoD7N7Yap8y8
+
+@destinationId = ChIJW2QwIz8DzpQRX3bMnMIc0-M
+###
+
+GET http://localhost:3000/directions?originId={{ originId }}&destinationId={{ destinationId }}
+
