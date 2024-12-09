@@ -5,7 +5,24 @@ GET http://localhost:3000/places?text=rua doutor gaspar ricardo, 176, santos
 @originId = ChIJ3ysYDvVsYpMRoD7N7Yap8y8
 
 @destinationId = ChIJW2QwIz8DzpQRX3bMnMIc0-M
-###
 
+
+###
 GET http://localhost:3000/directions?originId={{ originId }}&destinationId={{ destinationId }}
 
+###
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+  "name": "Rota 2",
+  "source_id": "{{ originId }}",
+  "destination_id": "{{ destinationId }}"
+}
+
+###
+GET   http://localhost:3000/routes
+
+
+###
+GET  http://localhost:3000/routes/675750535971cefffb7476d7
